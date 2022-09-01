@@ -1,0 +1,165 @@
+:root{
+    --color-primary:hsl(25, 97%, 53%);
+
+    --color-background-700:hsl(213, 19%, 18%);
+    --color-background-900:hsl(216, 12%, 8%);
+    --color-background-body:hsl(0, 0%, 0%);
+    
+    --font-primary: 'Overpass', sans-serif;
+    
+    --font-weight-regular: 400;
+    --font-weight-bold: 700;
+    
+    --font-color-100:hsl(0, 0%, 100%);
+    --font-color-200:hsl(217, 12%, 63%);
+    --font-color-300:hsl(216, 12%, 54%);
+
+    --fs-body: .9375rem;
+    --fs-btn:1rem;
+}
+
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* /////// GLOBAL */
+body{
+    font-size: var(--fs-body);
+    font-family: var(--font-primary);
+    color: var(--font-color-200);
+
+    background: var(--color-background-body);
+
+    width: 100vw;
+    height: 100vh;
+    padding: 2rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* /////// CARD */
+
+.container{
+    background: var(--color-background-900);
+
+    max-width: 25.8125rem;
+    padding: 2.5rem;
+
+    border-radius: 2rem;
+}
+
+/* CARD ONE */
+
+
+
+:is(.icon, .rating){
+    background: var(--color-background-700);
+
+    border-radius: 100%;
+    padding: 1rem;
+
+    margin-bottom: 1.25rem;
+}
+
+.title{
+    color: var(--font-color-100);
+    margin-bottom: 1.5rem;
+}
+
+.text{
+    margin-bottom: 2rem;
+}
+
+.rating-container{
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 1.7rem;
+}
+
+:is(.btn, .rating){
+    font-size: var(--fs-btn);
+    
+    outline: none;
+    border: none;
+    
+    cursor: pointer;
+
+    transition: all ease-in-out 350ms;
+}
+
+.rating{
+    color: var(--font-color-200);
+}
+
+.rating:hover{
+    background: var(--color-primary);
+    color: var(--font-color-100);
+}
+
+.btn{
+    color: var(--font-color-100);
+    text-transform: uppercase;
+    letter-spacing: .4rem;
+    
+    background: var(--color-primary);
+    border-radius: 1.875rem;
+
+    padding: .9375rem;
+    width: 100%;
+    margin: 0 auto;    
+}
+
+.btn:hover{
+    background-color: var(--font-color-100);
+    color: var(--color-primary);
+}
+
+
+.active{
+    background:var(--font-color-200);
+    color: var(--color-background-700);
+}
+
+/* CARD TWO */
+
+.card-two{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.selected{
+    text-align: center;
+    text-transform: capitalize;
+    color: var(--color-primary);
+    background: var(--color-background-700);
+
+    padding: .5rem;
+    max-width: 11.5rem;
+    margin: 1.8rem auto 1.8rem;
+
+    border-radius: 1.5rem;
+}
+
+.thank-you{
+    color: var(--font-color-100);
+    text-align: center;
+
+    margin-bottom: 1rem;
+}
+
+.thank-info{
+    text-align: center;
+}
+
+.notShow{
+    display: none;
+}
